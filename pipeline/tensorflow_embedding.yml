@@ -1,8 +1,11 @@
 language: "zh"
 
 pipeline:
-- name: "nlp_spacy"
-- name: "tokenizer_spacy"
-- name: "intent_featurizer_count_vectors"
+- name: "nlp_mitie"
+  model: "data/total_word_feature_extractor.dat"
+- name: "tokenizer_jieba"
+- name: "intent_featurizer_mitie"
 - name: "intent_classifier_tensorflow_embedding"
-- name: "ner_crf"
+  epochs: 900
+- name: "ner_mitie"
+- name: "ner_synonyms"
