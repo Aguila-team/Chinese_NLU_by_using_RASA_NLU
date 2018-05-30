@@ -65,21 +65,18 @@ cross_validation/MITIE+jieba.bash
     <thead>
     <tr>
         <th></th>
-        <th></th>
         <th colspan="6">Intent</th>
         <th colspan="6">Entity</th>
     </tr>
     <tr>
         <th></th>
-        <th></th>
         <th colspan="3">train</th>
         <th colspan="3">test</th>
         <th colspan="3">train</th>
         <th colspan="3">test</th>
     </tr>
     <tr>
-        <th>PipeLine</th>
-        <th>Config</th>
+        <th>Conf</th>
         <th>ACC</th>
         <th>F1</th>
         <th>PRC</th>
@@ -96,8 +93,7 @@ cross_validation/MITIE+jieba.bash
     </thead>
     <tbody>
     <tr>
-        <td>MITIE+jieba</td>
-        <td>-</td>
+        <td>MITIE</td>
         <td>0.986</td>
         <td>0.986</td>
         <td>0.986</td>
@@ -114,8 +110,8 @@ cross_validation/MITIE+jieba.bash
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="14">
-                ACC: Accuracy; F1: F1-score; PRC: Precision;
+            <td colspan="13">
+                Conf: configure; ACC: Accuracy; F1: F1-score; PRC: Precision;
             </td>
         </tr>
     </tfoot>
