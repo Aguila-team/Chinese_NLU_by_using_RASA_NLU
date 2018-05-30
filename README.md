@@ -60,6 +60,11 @@ cross_validation/MITIE+jieba.bash
 
 **TODO**: 等待 [New feature: component 'count_vectors_featurizer' can using 'tokens' provide by tokenizers](https://github.com/RasaHQ/rasa_nlu/pull/1115) 完成后，便可使用中文。
 
+### spacy
+
+**TODO**: 等待 [Models for SpaCy that support Chinese](https://github.com/howl-anderson/Chinese_models_for_SpaCy) 完成后，便可使用中文。
+
+
 ## 性能测试
 <table>
     <thead>
