@@ -76,7 +76,7 @@ cross_validation/MITIE+jieba.bash
         <th colspan="3">test</th>
     </tr>
     <tr>
-        <th>Conf</th>
+        <th>No</th>
         <th>ACC</th>
         <th>F1</th>
         <th>PRC</th>
@@ -93,7 +93,7 @@ cross_validation/MITIE+jieba.bash
     </thead>
     <tbody>
     <tr>
-        <td>MITIE</td>
+        <td>1</td>
         <td>0.986</td>
         <td>0.986</td>
         <td>0.986</td>
@@ -111,11 +111,17 @@ cross_validation/MITIE+jieba.bash
     <tfoot>
         <tr>
             <td colspan="13">
-                Conf: configure; ACC: Accuracy; F1: F1-score; PRC: Precision;
+                ACC: Accuracy; F1: F1-score; PRC: Precision;
             </td>
         </tr>
     </tfoot>
 </table>
+
+**模型列表**
+
+|No|Pipeline|Configure|
+|-|-|-|
+|1|MITIE+jieba|使用 [MITIE_Chinese_Wikipedia_corpus](https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus) 提供的 `total_word_feature_extractor.dat`|
 
 ## 如何贡献
 
