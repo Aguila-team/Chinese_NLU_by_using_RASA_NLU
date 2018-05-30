@@ -1,0 +1,29 @@
+language: "zh"
+
+pipeline:
+- name: "nlp_mitie"
+  model: "data/total_word_feature_extractor.dat"
+- name: "tokenizer_jieba"
+- name: "ner_mitie"
+- name: "ner_synonyms"
+- name: "intent_featurizer_mitie"
+- name: "intent_classifier_sklearn"
+
+# 2018-05-14 03:51:45 INFO     __main__  - CV evaluation (n=10)
+# 2018-05-14 03:51:45 INFO     __main__  - Intent evaluation results
+# 2018-05-14 03:51:45 INFO     __main__  - train Accuracy: 0.986 (0.018)
+# 2018-05-14 03:51:45 INFO     __main__  - train F1-score: 0.986 (0.019)
+# 2018-05-14 03:51:45 INFO     __main__  - train Precision: 0.986 (0.019)
+# 2018-05-14 03:51:45 INFO     __main__  - test Accuracy: 0.665 (0.093)
+# 2018-05-14 03:51:45 INFO     __main__  - test F1-score: 0.631 (0.100)
+# 2018-05-14 03:51:45 INFO     __main__  - test Precision: 0.648 (0.106)
+# 2018-05-14 03:51:45 INFO     __main__  - Entity evaluation results
+# 2018-05-14 03:51:45 INFO     __main__  - Entity extractor: ner_mitie
+# 2018-05-14 03:51:45 INFO     __main__  - train Accuracy: 0.987 (0.001)
+# 2018-05-14 03:51:45 INFO     __main__  - train F1-score: 0.987 (0.001)
+# 2018-05-14 03:51:45 INFO     __main__  - train Precision: 0.988 (0.001)
+# 2018-05-14 03:51:45 INFO     __main__  - Entity extractor: ner_mitie
+# 2018-05-14 03:51:45 INFO     __main__  - test Accuracy: 0.967 (0.028)
+# 2018-05-14 03:51:45 INFO     __main__  - test F1-score: 0.968 (0.027)
+# 2018-05-14 03:51:45 INFO     __main__  - test Precision: 0.973 (0.022)
+# 2018-05-14 03:51:45 INFO     __main__  - Finished evaluation
