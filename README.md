@@ -80,18 +80,18 @@ cross_validation/MITIE+jieba.bash
     <tr>
         <th>PipeLine</th>
         <th>Config</th>
-        <th>Accuracy</th>
-        <th>F1-score</th>
-        <th>Precision</th>
-        <th>Accuracy</th>
-        <th>F1-score</th>
-        <th>Precision</th>
-        <th>Accuracy</th>
-        <th>F1-score</th>
-        <th>Precision</th>
-        <th>Accuracy</th>
-        <th>F1-score</th>
-        <th>Precision</th>
+        <th>ACC</th>
+        <th>F1</th>
+        <th>PRC</th>
+        <th>ACC</th>
+        <th>F1</th>
+        <th>PRC</th>
+        <th>ACC</th>
+        <th>F1</th>
+        <th>PRC</th>
+        <th>ACC</th>
+        <th>F1</th>
+        <th>PRC</th>
     </tr>
     </thead>
     <tbody>
@@ -112,6 +112,13 @@ cross_validation/MITIE+jieba.bash
         <td>0.973</td>
     </tr>
     </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="14">
+                ACC: Accuracy; F1: F1-score; PRC: Precision;
+            </td>
+        </tr>
+    </tfoot>
 </table>
 
 ## 如何贡献
