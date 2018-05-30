@@ -119,9 +119,9 @@ cross_validation/MITIE+jieba.bash
 
 **模型列表**
 
-|No|Pipeline|Configure|
-|-|-|-|
-|1|MITIE+jieba|使用 [MITIE_Chinese_Wikipedia_corpus](https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus) 提供的 `total_word_feature_extractor.dat`|
+| No  | Pipeline    | Configure                                                                    |
+|-----|-------------|------------------------------------------------------------------------------|
+| 1   | MITIE+jieba | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
 
 ## 如何贡献
 
