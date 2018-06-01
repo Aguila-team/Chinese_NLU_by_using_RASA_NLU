@@ -1,4 +1,4 @@
-[README written in English](#) <!-- TODO -->
+[README written in English (TODO)](#) <!-- TODO -->
 ------------------------------
 
 # 使用 RASA NLU 来构建中文自然语言理解系统（NLU）
