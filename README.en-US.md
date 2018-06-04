@@ -1,4 +1,4 @@
-[README written in Chinese](README.md)
+[中文版本的 README](README.md)
 ------------------------------
 
 # Use RASA NLU to build a Chinese Natural Language Understanding System (NLU)
