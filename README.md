@@ -66,6 +66,7 @@ cross_validation/MITIE+jieba.bash
 
 
 ## 性能测试
+### DialogFlow > weather
 <table>
     <thead>
     <tr>
@@ -137,14 +138,12 @@ cross_validation/MITIE+jieba.bash
     </tfoot>
 </table>
 
-**模型列表**
+### Model List
 
-| No  | Pipeline    | Configure                                                                    |
-|-----|-------------|------------------------------------------------------------------------------|
-| 1   | MITIE+jieba | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
+| No  | Pipeline             | Configure                                                                    |
+|-----|----------------------|------------------------------------------------------------------------------|
+| 1   | MITIE+jieba          | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
 | 1   | tensorflow_embedding | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
-
-
 
 ## 如何贡献
 
