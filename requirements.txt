@@ -47,7 +47,7 @@ python-crfsuite==0.9.5
 python-dateutil==2.7.3
 pytz==2018.4
 PyYAML==3.12
-rasa-nlu==0.12.3
+git+https://github.com/RasaHQ/rasa_nlu.git
 regex==2017.4.5
 requests==2.18.4
 s3transfer==0.1.13
