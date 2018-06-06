@@ -60,8 +60,42 @@ cross_validation/MITIE+jieba.bash
 ```
 
 ### tensorflow_embedding
+#### description
+* jieba provide tokenizer for Chinese
+* tensorflow_embedding used for `intent classification`
+* MITIE is used for `slot filling`
 
-**TODO**: Wait [New feature: component 'count_vectors_featurizer' can use 'tokens' provide by tokenizers](https://github.com/RasaHQ/rasa_nlu/pull/1115) After finishing, you can use Chinese.
+#### Install Dependent Packages
+```bash
+pip install git+https://github.com/mit-nlp/MITIE.git
+Pip install jieba
+pip install tensorflow
+```
+#### Download the required model data
+MITIE needs a model file, in my another project: [MITIE_Chinese_Wikipedia_corpus] (https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus) [release] (https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus/ Releases) Download `total_word_feature_extractor.dat.tar.gz`. Extract `total_word_feature_extractor.dat` to `data`
+#### pipeline
+```yaml
+language: "zh"
+
+pipeline:
+- name: "nlp_mitie"
+  model: "data/total_word_feature_extractor.dat"
+- name: "tokenizer_jieba"
+- name: "intent_featurizer_count_vectors"
+- name: "intent_classifier_tensorflow_embedding"
+- name: "ner_mitie"
+- name: "ner_synonyms"
+```
+
+#### Training Script
+```bash
+trainer/tensorflow_embedding.bash
+```
+
+#### Evaluation Script
+```bash
+cross_validation/tensorflow_embedding.bash
+```
 
 ### spacy
 

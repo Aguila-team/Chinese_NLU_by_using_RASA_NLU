@@ -61,7 +61,42 @@ cross_validation/MITIE+jieba.bash
 
 ### tensorflow_embedding
 
-**TODO**: 等待 [New feature: component 'count_vectors_featurizer' can using 'tokens' provide by tokenizers](https://github.com/RasaHQ/rasa_nlu/pull/1115) 完成后，便可使用中文。
+#### 描述
+* jieba 提供中文分词功能
+* tensorflow_embedding 负责 `intent classification`
+* MITIE 负责 `slot filling`
+
+#### 安装依赖的软件包
+```bash
+pip install git+https://github.com/mit-nlp/MITIE.git
+pip install jieba
+pip install tensorflow
+```
+#### 下载所需的模型数据
+MITIE 需要一个模型文件，在本人的另一个项目: [MITIE_Chinese_Wikipedia_corpus](https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus) 的 [release](https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus/releases) 下载 `total_word_feature_extractor.dat.tar.gz`. 解压后将 `total_word_feature_extractor.dat` 放至 `data`
+#### pipeline
+```yaml
+language: "zh"
+
+pipeline:
+- name: "nlp_mitie"
+  model: "data/total_word_feature_extractor.dat"
+- name: "tokenizer_jieba"
+- name: "intent_featurizer_count_vectors"
+- name: "intent_classifier_tensorflow_embedding"
+- name: "ner_mitie"
+- name: "ner_synonyms"
+```
+
+#### 训练脚本
+```bash
+trainer/tensorflow_embedding.bash
+```
+
+#### 评估脚本
+```bash
+cross_validation/tensorflow_embedding.bash
+```
 
 ### spacy
 
