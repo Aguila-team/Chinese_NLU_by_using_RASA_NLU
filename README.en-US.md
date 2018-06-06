@@ -152,12 +152,12 @@ cross_validation/tensorflow_embedding.bash
     </tr>
     <tr>
         <td>2</td>
-        <td>1.000</td>
-        <td>1.000</td>
-        <td>1.000</td>
-        <td>0.648</td>
-        <td>0.611</td>
-        <td>0.627</td>
+        <td>0.990</td>
+        <td>0.990</td>
+        <td>0.990</td>
+        <td>0.434</td>
+        <td>0.406</td>
+        <td>0.432</td>
         <td>0.987</td>
         <td>0.987</td>
         <td>0.988</td>
