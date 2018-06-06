@@ -27,16 +27,16 @@ For more information, visit [workflow.md](workflow.md)
 ### MITIE+jieba
 #### Install Dependent Packages
 ```bash
-Pip install git+https://github.com/mit-nlp/MITIE.git
+pip install git+https://github.com/mit-nlp/MITIE.git
 Pip install jieba
 ```
 #### Download the required model data
 MITIE needs a model file, in my another project: [MITIE_Chinese_Wikipedia_corpus] (https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus) [release] (https://github.com/howl-anderson/MITIE_Chinese_Wikipedia_corpus/ Releases) Download `total_word_feature_extractor.dat.tar.gz`. Extract `total_word_feature_extractor.dat` to `data`
 #### pipeline
 ```yaml
-Language: "zh"
+language: "zh"
 
-Pipeline:
+pipeline:
 - name: "nlp_mitie"
   Model: "data/total_word_feature_extractor.dat"
 - name: "tokenizer_jieba"
@@ -48,12 +48,12 @@ Pipeline:
 
 #### Training Script
 ```bash
-Trainer/MITIE+jieba.bash
+trainer/MITIE+jieba.bash
 ```
 
 #### Evaluation Script
 ```bash
-Cross_validation/MITIE+jieba.bash
+cross_validation/MITIE+jieba.bash
 ```
 
 ### tensorflow_embedding
