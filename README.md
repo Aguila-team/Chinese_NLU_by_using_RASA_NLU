@@ -25,6 +25,9 @@ Python 3 (也许支持 python2, 但未经过良好测试)
 
 ## 可用 pipeline 列表
 ### MITIE+jieba
+#### 描述
+* jieba 提供中文分词功能
+* MITIE 负责 `intent classification` 和 `slot filling`
 #### 安装依赖的软件包
 ```bash
 pip install git+https://github.com/mit-nlp/MITIE.git

@@ -25,6 +25,9 @@ For more information, visit [workflow.md](workflow.md)
 
 ## available pipeline list
 ### MITIE+jieba
+#### description
+* jieba provide tokenizer for Chinese
+* MITIE is used for `intent classification` and `slot filling`
 #### Install Dependent Packages
 ```bash
 pip install git+https://github.com/mit-nlp/MITIE.git
