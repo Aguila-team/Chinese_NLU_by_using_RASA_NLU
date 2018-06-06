@@ -112,6 +112,21 @@ cross_validation/MITIE+jieba.bash
         <td>0.968</td>
         <td>0.973</td>
     </tr>
+    <tr>
+        <td>2</td>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>0.648</td>
+        <td>0.611</td>
+        <td>0.627</td>
+        <td>0.987</td>
+        <td>0.987</td>
+        <td>0.988</td>
+        <td>0.968</td>
+        <td>0.970</td>
+        <td>0.975</td>
+    </tr>
     </tbody>
     <tfoot>
         <tr>
@@ -127,6 +142,9 @@ cross_validation/MITIE+jieba.bash
 | No  | Pipeline    | Configure                                                                    |
 |-----|-------------|------------------------------------------------------------------------------|
 | 1   | MITIE+jieba | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
+| 1   | tensorflow_embedding | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
+
+
 
 ## 如何贡献
 
