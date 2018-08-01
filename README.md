@@ -181,7 +181,7 @@ cross_validation/tensorflow_embedding.bash
 | No  | Pipeline             | Configure                                                                    |
 |-----|----------------------|------------------------------------------------------------------------------|
 | 1   | MITIE+jieba          | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
-| 1   | tensorflow_embedding | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
+| 2   | tensorflow_embedding | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
 
 ## 如何贡献
 
