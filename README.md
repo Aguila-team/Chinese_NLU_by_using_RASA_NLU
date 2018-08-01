@@ -99,8 +99,37 @@ cross_validation/tensorflow_embedding.bash
 ```
 
 ### spacy
+#### 描述
+* [Chinese_models_for_SpaCy](https://github.com/howl-anderson/Chinese_models_for_SpaCy) 负责 `intent classification` and `slot filling`
+#### 安装依赖的软件包
+```bash
+pip install https://github.com/howl-anderson/Chinese_models_for_SpaCy/releases/download/v2.0.3/zh_core_web_sm-2.0.3.tar.gz
+./spacy_model_link.bash
+```
+#### pipeline
+```yaml
+language: "zh"
 
-**TODO**: 等待 [Models for SpaCy that support Chinese](https://github.com/howl-anderson/Chinese_models_for_SpaCy) 完成后，便可使用中文。
+pipeline:
+- name: "nlp_spacy"
+  model: "zh"
+- name: "tokenizer_spacy"
+- name: "intent_entity_featurizer_regex"
+- name: "intent_featurizer_spacy"
+- name: "ner_crf"
+- name: "ner_synonyms"
+- name: "intent_classifier_sklearn"
+```
+
+#### 训练脚本
+```bash
+trainer/spacy.bash
+```
+
+#### 评估脚本
+```bash
+cross_validation/spacy.bash
+```
 
 
 ## 性能测试
@@ -166,6 +195,21 @@ cross_validation/tensorflow_embedding.bash
         <td>0.970</td>
         <td>0.975</td>
     </tr>
+    <tr>
+        <td>3</td>
+        <td>0.992</td>
+        <td>0.992</td>
+        <td>0.992</td>
+        <td>0.657</td>
+        <td>0.598</td>
+        <td>0.587</td>
+        <td>0.987</td>
+        <td>0.987</td>
+        <td>0.988</td>
+        <td>0.939</td>
+        <td>0.934</td>
+        <td>0.947</td>
+    </tr>
     </tbody>
     <tfoot>
         <tr>
@@ -182,6 +226,7 @@ cross_validation/tensorflow_embedding.bash
 |-----|----------------------|------------------------------------------------------------------------------|
 | 1   | MITIE+jieba          | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
 | 2   | tensorflow_embedding | 使用 `MITIE_Chinese_Wikipedia_corpus` 项目提供的 `total_word_feature_extractor.dat` |
+| 3   | spacy                | 使用 `Chinese_models_for_SpaCy` 项目提供的中文 SpaCy 模型                      |
 
 ## 如何贡献
 

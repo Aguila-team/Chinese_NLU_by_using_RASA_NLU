@@ -98,8 +98,37 @@ cross_validation/tensorflow_embedding.bash
 ```
 
 ### spacy
+#### description
+* [Chinese_models_for_SpaCy](https://github.com/howl-anderson/Chinese_models_for_SpaCy) used for `intent classification` and `slot filling`
+#### Install Dependent Packages
+```bash
+pip install https://github.com/howl-anderson/Chinese_models_for_SpaCy/releases/download/v2.0.3/zh_core_web_sm-2.0.3.tar.gz
+./spacy_model_link.bash
+```
+#### pipeline
+```yaml
+language: "zh"
 
-**TODO**: After waiting for [Models for SpaCy that support Chinese](https://github.com/howl-anderson/Chinese_models_for_SpaCy) to finish, you can use Chinese.
+pipeline:
+- name: "nlp_spacy"
+  model: "zh"
+- name: "tokenizer_spacy"
+- name: "intent_entity_featurizer_regex"
+- name: "intent_featurizer_spacy"
+- name: "ner_crf"
+- name: "ner_synonyms"
+- name: "intent_classifier_sklearn"
+```
+
+#### Training Script
+```bash
+trainer/spacy.bash
+```
+
+#### Evaluation Script
+```bash
+cross_validation/spacy.bash
+```
 
 
 ## Performance Testing
@@ -165,6 +194,21 @@ cross_validation/tensorflow_embedding.bash
         <td>0.970</td>
         <td>0.975</td>
     </tr>
+    <tr>
+        <td>3</td>
+        <td>0.992</td>
+        <td>0.992</td>
+        <td>0.992</td>
+        <td>0.657</td>
+        <td>0.598</td>
+        <td>0.587</td>
+        <td>0.987</td>
+        <td>0.987</td>
+        <td>0.988</td>
+        <td>0.939</td>
+        <td>0.934</td>
+        <td>0.947</td>
+    </tr>
     </tbody>
     <tfoot>
         <tr>
@@ -181,6 +225,7 @@ cross_validation/tensorflow_embedding.bash
 |-----|----------------------|---------------------------------------------------------------------------------------------|
 | 1   | MITIE+jieba          | `total_word_feature_extractor.dat` provided by the `MITIE_Chinese_Wikipedia_corpus` project |
 | 2   | tensorflow_embedding | `total_word_feature_extractor.dat` provided by the `MITIE_Chinese_Wikipedia_corpus` project |
+| 3   | spacy                | Chinese SpaCy model provided by the `Chinese_models_for_SpaCy` project                      |
 
 ## How to contribute
 
