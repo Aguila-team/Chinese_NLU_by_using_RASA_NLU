@@ -72,3 +72,6 @@ urllib3==1.22
 Werkzeug==0.14.1
 wrapt==1.10.11
 zope.interface==4.5.0
+MarkupSafe==1.0
+jinja2==2.10
+joblib==0.12.2
