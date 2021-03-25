@@ -51,7 +51,7 @@ pyparsing==2.2.0
 python-crfsuite==0.9.5
 python-dateutil==2.7.3
 pytz==2018.4
-PyYAML==3.12
+PyYAML==5.4
 rasa-nlu==0.13.1
 regex==2017.4.5
 requests==2.18.4
