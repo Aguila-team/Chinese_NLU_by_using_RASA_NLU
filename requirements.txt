@@ -28,7 +28,7 @@ incremental==17.5.0
 jieba==0.39
 Jinja2==2.10
 jmespath==0.9.3
-joblib==0.12.2
+joblib==1.2.0
 jsonschema==2.6.0
 kiwisolver==1.0.1
 klein==17.10.0
